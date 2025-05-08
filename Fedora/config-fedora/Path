@@ -1,0 +1,3 @@
+#! /bin/bash
+
+zenity --info --title "Path" --text="$PWD/$1"

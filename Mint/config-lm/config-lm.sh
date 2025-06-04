@@ -31,7 +31,7 @@ install_app(){
 	echo ""
 	echo -e "\033[1;32mSoftware installation\033[0m"
 	echo ""
-	apt install -y $ADDAPP
+	apt install --skip-unavailable -y $ADDAPP
 	echo ""
 }
 

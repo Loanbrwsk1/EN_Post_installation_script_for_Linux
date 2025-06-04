@@ -51,7 +51,7 @@ install_app(){
 	echo ""
 	echo -e "\033[1;32mInstallation of RPM Fusion components\033[0m"
 	echo ""
-	dnf install -y $RPMFUSIONCOMP
+	dnf install --skip-unavailable -y $RPMFUSIONCOMP
 	echo ""
 	echo -e "\033[1;32mInstallation RPM Fusion Free\033[0m"
 	echo ""
@@ -63,7 +63,7 @@ install_app(){
 	echo ""
 	echo -e "\033[1;32mInstallation of codecs\033[0m"
 	echo ""
-	dnf install -y $CODEC
+	dnf install --skip-unavailable -y $CODEC
 	echo ""
 	echo -e "\033[1;32mFlatpak softwares installation\033[0m"
 	echo ""
@@ -71,11 +71,11 @@ install_app(){
 	echo ""
 	echo -e "\033[1;32mSoftware installation\033[0m"
 	echo ""
-	dnf install -y $ADDAPP
+	dnf install --skip-unavailable -y $ADDAPP
 	echo ""
 	echo -e "\033[1;32mInstalling the GNOME components\033[0m"
 	echo ""
-	dnf install -y $GNOMECOMP
+	dnf install --skip-unavailable -y $GNOMECOMP
 }
 
 main(){

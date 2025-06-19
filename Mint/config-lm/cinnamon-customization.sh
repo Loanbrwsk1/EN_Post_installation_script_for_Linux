@@ -9,7 +9,7 @@ if [ $wallpaper -eq 0 ]
 then
     git clone https://github.com/Loanbrwsk1/Wallpapers.git 
     rm -fr ./Wallpapers/.git/
-    mv ./Wallpapers/ ~/Images/
+    mv ./Wallpapers/ ~/Pictures/
 fi
 
 if [ $dynamic_wallpaper -eq 0 ]
@@ -18,7 +18,7 @@ then
     cd ./Dynamic-wallpapers/
     sudo mv ./Dynamic_Wallpapers/ /usr/share/backgrounds/
     sudo mv ./xml/* /usr/share/cinnamon-background-properties/
-    mv ./Screenshots_dynamic_wallpapers/ ~/Images/
+    mv ./Screenshots_dynamic_wallpapers/ ~/Pictures/
     cd ..
     rm -rf ./Dynamic-wallpapers/
 fi

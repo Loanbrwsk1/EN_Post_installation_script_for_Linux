@@ -1,6 +1,6 @@
 #! /bin/bash
 
-zenity --question --title="Wallpapers" --text="Do you want additional wallpapers ?"
+zenity --question --title="Wallpapers" --text="Do you want additional wallpapers ? (may take a while)"
 wallpaper=$?
 zenity --question --title="Dynamics wallpapers" --text="Do you want dynamics wallpapers ?"
 dynamic_wallpaper=$?
@@ -8,8 +8,10 @@ dynamic_wallpaper=$?
 if [ $wallpaper -eq 0 ]
 then
     git clone https://github.com/Loanbrwsk1/Wallpapers.git 
-    rm -fr ./Wallpapers/.git/
-    mv ./Wallpapers/ ~/Pictures/
+    cd Wallpapers
+    mv ./wallpapers/ ~/Pictures/
+    cd ..
+    rm -fr ./Wallpapers/
 fi
 
 if [ $dynamic_wallpaper -eq 0 ]
